@@ -2,9 +2,7 @@
 
 </style>
 <template>
-    <div>
-        <router-view class="view"></router-view>
-    </div>
+
 </template>
 <script>
     export default {
@@ -13,9 +11,6 @@
         },
         computed: {},
         methods: {},
-        components:{
-            sidebar:require('components/sidebar.vue')
-        },
         mounted(){
 
         }
