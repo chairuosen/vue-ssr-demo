@@ -1,9 +1,28 @@
 <style lang="less" rel="stylesheet/less">
-
+    *{
+        margin:0;
+        padding:0;
+    }
+    img{
+        border:none;
+    }
+    li{
+        margin-left:20px;
+    }
+    .sidebar{
+        width:200px;
+        float:left;
+    }
+    .view{
+        margin-left:200px;
+    }
 </style>
 <template>
     <div>
-        <router-view class="view"></router-view>
+        <sidebar class="sidebar"></sidebar>
+        <keep-alive>
+            <router-view class="view"></router-view>
+        </keep-alive>
     </div>
 </template>
 <script>

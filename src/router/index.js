@@ -6,26 +6,7 @@ Vue.use(Router)
 const router = new Router({
     mode: 'history',
     scrollBehavior: () => ({y: 0}),
-    routes: [
-        {
-            path: '/index',
-            component: require('../views/test.vue'),
-            meta:{
-                title:'首页'
-            }
-        },
-        {
-            path:'/test',
-            component:require('../views/test2.vue'),
-            meta:{
-                title:"测试2"
-            }
-        },
-        {
-            path: '/',
-            redirect: '/index'
-        }
-    ]
+    routes: require('./route.js')
 });
 
 var defaultTitle = '';
