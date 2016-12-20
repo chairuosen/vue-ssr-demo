@@ -6,23 +6,23 @@
     img{
         border:none;
     }
-    li{
-        margin-left:20px;
-    }
     .sidebar{
         width:200px;
         float:left;
     }
     .view{
         margin-left:200px;
+        overflow: hidden;
     }
 </style>
 <template>
     <div>
         <sidebar class="sidebar"></sidebar>
-        <keep-alive>
-            <router-view class="view"></router-view>
-        </keep-alive>
+        <div class="view">
+            <keep-alive>
+                <router-view></router-view>
+            </keep-alive>
+        </div>
     </div>
 </template>
 <script>

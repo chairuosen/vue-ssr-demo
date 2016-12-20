@@ -1,10 +1,18 @@
 <style lang="less" rel="stylesheet/less">
-
+    .nav{
+        li{
+            padding:0 20px;
+            list-style: none;
+            &.actived{
+                background:#f7f7f7;
+            }
+        }
+    }
 </style>
 <template>
     <div>
-        <ul>
-            <li v-for="route in routes" v-if="route.meta">
+        <ul class="nav">
+            <li v-for="route in routes" v-if="route.meta" :class="{actived:isCurrent(route)}">
                 <router-link :to="route.path">{{route.meta.title}}</router-link>
             </li>
         </ul>
@@ -19,11 +27,12 @@
             }
         },
         computed: {},
-        methods: {},
+        methods: {
+            isCurrent(route){
+                return true;
+            }
+        },
         mounted(){
-            console.log(this.$route)
-            window.vm = this;
-
         }
     }
 </script>
