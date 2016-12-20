@@ -1,13 +1,14 @@
 <style lang="less" rel="stylesheet/less">
     .nav{
         li{
-            padding:0 20px;
             list-style: none;
             &.actived{
                 background:#e7e7e7;
             }
             a{
                 color:#333;
+                padding:0 20px;
+                display:block;
             }
         }
     }
