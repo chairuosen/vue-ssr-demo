@@ -4,7 +4,6 @@ const isProd = process.env.NODE_ENV === 'production'
 const fs = require('fs')
 const path = require('path')
 const express = require('express')
-const favicon = require('serve-favicon')
 const compression = require('compression')
 const serialize = require('serialize-javascript')
 const resolve = file => path.resolve(__dirname, file)
@@ -35,7 +34,7 @@ function createRenderer(bundle) {
     return require('vue-server-renderer').createBundleRenderer(bundle, {
         cache: require('lru-cache')({
             max: 1000,
-            maxAge: 1000 * 60 * 15
+            maxAge: 1000 * 60 * 5
         })
     })
 }
