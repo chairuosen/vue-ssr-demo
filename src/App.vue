@@ -28,7 +28,9 @@
 <script>
     export default {
         data(){
-            return {}
+            return {
+                ready:true
+            }
         },
         computed: {},
         methods: {},
