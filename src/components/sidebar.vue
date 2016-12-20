@@ -4,7 +4,10 @@
             padding:0 20px;
             list-style: none;
             &.actived{
-                background:#f7f7f7;
+                background:#e7e7e7;
+            }
+            a{
+                color:#333;
             }
         }
     }
@@ -29,7 +32,7 @@
         computed: {},
         methods: {
             isCurrent(route){
-                return true;
+                return this.$route.path == route.path;
             }
         },
         mounted(){
